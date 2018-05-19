@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router';
+import VueResource from 'vue-resource';
 import App from './App.vue'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -9,6 +10,7 @@ Vue.use(BootstrapVue);
 import VueParticles from 'vue-particles'
 Vue.use(VueParticles)
 
+Vue.use(VueResource);
 
 Vue.use(VueRouter);
 const router = new VueRouter({

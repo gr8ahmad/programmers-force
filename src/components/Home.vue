@@ -8,7 +8,7 @@
 </template>
 
 <script>
-    import VueParticles from './VueParticles.vue';
+    import VueParticles from './vue-particles/VueParticles.vue';
     export default {
         data() {
             return {
@@ -32,6 +32,10 @@
 
     .home {
         background: #0e415b;
+        background: url(../assets/intro.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top left;
     }
 
     .banner h1 {

@@ -12,10 +12,11 @@
     <!-- Right aligned nav items -->
     <b-navbar-nav class="ml-auto">
     <b-navbar-nav>
-      <b-nav-item to="/">HOME</b-nav-item>
+      <b-nav-item to="/" exact>HOME</b-nav-item>
       <b-nav-item>ABOUT US</b-nav-item>
       <b-nav-item>SERVICES</b-nav-item>
       <b-nav-item to="/portfolio">PORTFOLIO</b-nav-item>
+      <b-nav-item>CAREERS</b-nav-item>
       <b-nav-item>CONTACT</b-nav-item>
     </b-navbar-nav>
     </b-navbar-nav>
@@ -29,25 +30,34 @@
 <!--script-->
 
 <script>
-export default {
-    data: function() {
-        return {
-            
+    export default {
+        data: function() {
+            return {
+
+            }
         }
     }
-}
+
 </script>
 
 <!--style-->
 
 <style scoped>
-.navbar-dark .navbar-nav .nav-link {
-        color: #fff;
+    header {
+        background: #0e415b;
     }
+
     .nav-item {
         margin: 0 8px;
     }
-    header {
-            background: #0e415b;
+
+    .navbar-dark .navbar-nav .nav-link {
+        color: #fff;
     }
+
+    .navbar-dark .navbar-nav .nav-link.active {
+        font-weight: bold;
+        color: #00a558;
+    }
+
 </style>
