@@ -12,11 +12,11 @@
     <!-- Right aligned nav items -->
     <b-navbar-nav class="ml-auto">
     <b-navbar-nav>
-      <b-nav-item href="#">HOME</b-nav-item>
-      <b-nav-item href="#">ABOUT US</b-nav-item>
-      <b-nav-item href="#">SERVICES</b-nav-item>
-      <b-nav-item href="#">PORTFOLIO</b-nav-item>
-      <b-nav-item href="#">CONTACT</b-nav-item>
+      <b-nav-item to="/">HOME</b-nav-item>
+      <b-nav-item>ABOUT US</b-nav-item>
+      <b-nav-item>SERVICES</b-nav-item>
+      <b-nav-item to="/portfolio">PORTFOLIO</b-nav-item>
+      <b-nav-item>CONTACT</b-nav-item>
     </b-navbar-nav>
     </b-navbar-nav>
 
@@ -46,5 +46,8 @@ export default {
     }
     .nav-item {
         margin: 0 8px;
+    }
+    header {
+            background: #0e415b;
     }
 </style>
