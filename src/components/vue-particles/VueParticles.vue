@@ -17,10 +17,7 @@
         :clickEffect="true"
         clickMode="push"
       >
-      </vue-particles>    
-<ul>
-    <li>{{ptData.pShape}} - {{ptData.pColor }}</li>
-</ul>
+      </vue-particles>
 </div>
 </template>
 
@@ -53,7 +50,9 @@ export default {
 </script>
 
 <style>
-    
+    div#particles-js {
+        position: relative;
+    }
     canvas.particles-js-canvas-el {
         min-height: 100vh;
         margin-top: -90px;

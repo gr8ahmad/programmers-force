@@ -1,26 +1,23 @@
 <template>
 <div>
    <div>
-        <b-card :title="name"
-          :img-src="imagePath"
-          img-alt="Image"
-          img-top
-          tag="article"
-          style="max-width: 20rem;"
-          class="mb-2">
-    <p class="card-text">{{ description }}</p>
-    <b-button variant="primary" :to="/portfolio/ + id">Visit Project</b-button>
-  </b-card>
+<h2>{{pfProject.projectName}}</h2>
+<img :src="pfProject.projectImagePath" alt="">
+  <p>{{pfProject.projectDescription}}</p>
    </div>
 </div>
 </template>
 
 <script>
+    import { Projects } from '../Projects'
     export default {
-        props: ['name', 'imagePath', 'description', 'id'],
         data() {
             return {
+                pfProject: {}
             }
+        },
+        created() {
+            this.pfProject = Projects.getProject(this.$route.params.id);
         }
     }
 

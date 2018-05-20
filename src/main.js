@@ -5,7 +5,7 @@ import App from './App.vue'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import { routes } from './routes.js'
+import { routes } from './router/routes.js'
 Vue.use(BootstrapVue);
 import VueParticles from 'vue-particles'
 Vue.use(VueParticles)

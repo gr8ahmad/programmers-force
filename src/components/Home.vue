@@ -1,7 +1,11 @@
 <template>
            <div class="home">
             <div class="banner">
+            <div>
             <h1>We Think in New Dimensions </h1>
+            <p>Programmers Force aims to solve the biggest challenges in FinTech, Web and Application Software</p>
+            <p>Development. Our end-to-end expertise ensures scalable solutions and digital innovation. </p>
+            </div>
         </div>
         <VueParticles />
 </div>
@@ -24,34 +28,32 @@
 
 
 <style scoped>
-    html,
-    body {
-        /*        height: 100%;*/
-        /*        background: url(assets/brickwall.png);*/
-    }
-
-    .home {
-        background: #0e415b;
-        background: url(../assets/intro.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top left;
-    }
-
     .banner h1 {
-        font-family: Teko, sans-serif;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 4vw;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.76);
+        margin-bottom: 20px;
     }
 
     .banner {
         position: absolute;
-        left: 50%;
-        top: 300px;
+        left: 0;
+        top: 0;
         color: #fff;
-        margin-left: -323px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
-
-    .banner h1 {
-        font-size: 60px;
-    }
+    .banner p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.76);
+}
 
 </style>
