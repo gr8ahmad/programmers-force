@@ -4,7 +4,7 @@
 
   <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-  <b-navbar-brand href="#" to="/"><img src="../assets/logo.png" alt=""></b-navbar-brand>
+  <b-navbar-brand href="#" to="/"><img src="../../assets/logo.png" alt=""></b-navbar-brand>
 
   <b-collapse is-nav id="nav_collapse">
 
@@ -14,10 +14,8 @@
     <b-navbar-nav>
       <b-nav-item to="/" exact>HOME</b-nav-item>
       <b-nav-item to="/about">ABOUT US</b-nav-item>
-      <b-nav-item to="/services">SERVICES</b-nav-item>
       <b-nav-item to="/portfolio">PORTFOLIO</b-nav-item>
       <b-nav-item to="/careers">CAREERS</b-nav-item>
-      <b-nav-item to="/contact">CONTACT</b-nav-item>
     </b-navbar-nav>
     </b-navbar-nav>
 

@@ -9,7 +9,6 @@
 </template>
 
 <script>
-//    import Project from './projects/Project.vue'
     export default {
         data() {
             return {
@@ -25,10 +24,7 @@
             goHome() {
                 this.$router.push('/');
             }
-        },
-//        components :{
-//        Project
-//    }
+        }
     }
 
 </script>

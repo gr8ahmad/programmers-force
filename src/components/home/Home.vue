@@ -7,21 +7,22 @@
             <p>Development. Our end-to-end expertise ensures scalable solutions and digital innovation. </p>
             </div>
         </div>
+        <div class="vue-particles">    
         <VueParticles />
+        </div>
 </div>
 </template>
 
 <script>
-    import VueParticles from './vue-particles/VueParticles.vue';
+    import VueParticles from '../vue-particles/VueParticles.vue';
     export default {
         data() {
             return {
-
             }
         },
         components: {
             VueParticles
-        }
+        },
     }
 
 </script>
@@ -34,7 +35,7 @@
         font-weight: 900;
         text-transform: uppercase;
         text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.76);
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     .banner {
@@ -50,10 +51,25 @@
         text-align: center;
     }
     .banner p {
-    font-size: 20px;
+    font-size: 1.5vw;
     margin-bottom: 10px;
     font-weight: 500;
     text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.76);
 }
+    div#carousel1 {
+    max-width: 800px;
+    margin: auto;
+}
+    #app.home .vue-particles  {
+        min-height: 100vh;
+        margin-top: -84px;
+    }
+    #app.home .vue-particles  {
+        background: #0e415b;
+        background: url(../../assets/intro.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+    }
 
 </style>

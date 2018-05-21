@@ -17,19 +17,38 @@
     </b-row>
     
 </b-container>
+<div class="container">
+<div class="row">
+    <div class="col-sm-12 text-center">
+        <b-button variant="primary" @click="fetchData" v-if="!loaded">Load More</b-button>
+    </div>
+</div>       
+</div>
 </div>
 </template>
 <script>
-import { Projects }  from '../Projects';
     export default {
         data() {
             return {
-                pfProjects: []
+                pfProjects: [],
+                loaded: false
 
             }
         },
+        methods: {
+            fetchData() {
+            this.$http.get('https://programmers-force.firebaseio.com/pfProject.json')
+                .then(response=> {
+                return response.json()
+            })
+                .then(data=> {
+                this.pfProjects.push(data);
+                this.loaded = true;
+            })
+            }
+        },
         created() {
-            this.pfProjects = Projects.getProjects();
+            this.pfProjects = this.$store.getters.getProjects;
             
         }
     }
@@ -38,7 +57,6 @@ import { Projects }  from '../Projects';
 
 <style scoped>
     @media (min-width: 768px) {
-        
         .col {
         min-width: 33.33%;
         margin-bottom: 30px;

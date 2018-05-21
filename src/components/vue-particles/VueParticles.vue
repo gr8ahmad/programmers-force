@@ -49,15 +49,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     div#particles-js {
         position: relative;
     }
     canvas.particles-js-canvas-el {
         min-height: 100vh;
         margin-top: -90px;
-    }
-    li {
-        color: #fff;
     }
 </style>

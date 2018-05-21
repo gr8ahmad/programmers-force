@@ -1,15 +1,21 @@
-import Home from '../components/Home.vue'
+import Home from '../components/home/Home.vue'
 import Portfolio from '../components/portfolio/Portfolio.vue'
 import ProjectList from '../components/portfolio/projects/ProjectList.vue'
 import Project from '../components/portfolio/projects/Project.vue'
 import VueParticlesAdmin from '../components/vue-particles/VueParticlesAdmin.vue'
-import About from '../views/About.vue'
-import Services from '../views/Services.vue'
-import Careers from '../views/Careers.vue'
-import Contact from '../views/Contact.vue'
-import Dashboard from '../components/dashboard/Index.vue'
+import About from '../components/pages/About.vue'
+import Careers from '../components/pages/careers/Careers.vue'
+import JobList from '../components/pages/careers/jobs/JobList.vue'
+import JobDetails from '../components/pages/careers/jobs/JobDetails.vue'
+import Contact from '../components/pages/Contact.vue'
+import Dashboard from '../components/dashboard/Dashboard.vue'
 import NewProject from '../components/portfolio/projects/NewProject.vue'
+import Login from '../components/dashboard/Login.vue';
 export const routes = [
+    {
+        path: '*',
+        redirect: '/'
+    },
     {
         path: '',
         component: Home
@@ -37,22 +43,41 @@ export const routes = [
         component: About
     },
     {
-        path: '/services',
-        component: Services
-    },
-    {
         path: '/careers',
-        component: Careers
+        component: Careers,
+        children: [
+            {
+                path: '',
+                component: JobList
+            },
+            {
+                path: ':id',
+                component: JobDetails
+            }
+        ]
     },
     {
         path: '/contact',
         component: Contact
     },
-    {path: '/admin', component: Dashboard, children: [
     {
-        path: 'new-project',
-        component: NewProject
+        path: '/login',
+        component: Login,
+        name: 'login'
+    },
+    {
+        path: '/admin',
+        name: 'admin',
+        component: Dashboard,
+        meta: {
+            requiresAuth: true
+        },
+        children: [
+            {
+                path: 'new-project',
+                component: NewProject
     }
-    ]}
+    ]
+    }
 
 ]

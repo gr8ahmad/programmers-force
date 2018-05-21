@@ -6,41 +6,35 @@
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import { Projects } from './components/portfolio/Projects'
+    import Header from './components/home/Header.vue'
 
-export default {
-  name: 'app',
-  components: {
-    Header
-  },
-    created() {
-    this.$http.get('https://programmers-force.firebaseio.com/pfProject.json')
-            .then(response=> {
-                return response.json();
-            }).
-            then(data=> {
-                Projects.projects.push(data);
-                console.log(Projects.projects)
-            })
-
+    export default {
+        name: 'app',
+        components: {
+            Header
+        },
+        created() {
+            console.log(this.$store.getters.getUser)
+        }
     }
-}
+
 </script>
 
 <style>
-            body {
-            font-family: 'Quicksand', sans-serif !important;
-        }
-    #app.home {
-        background: #0e415b;
-        background: url(./assets/intro.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: bottom right;
+    body {
+        font-family: 'Quicksand', sans-serif !important;
     }
+
     div#app.non-home header {
-    margin-bottom: 60px;
-}
+        margin-bottom: 60px;
+    }
+
+    #app .btn-primary {
+        background-color: #00a558;
+        border-color: #00a558;
+    }
+    li {
+        color: #000;
+    }
 
 </style>
